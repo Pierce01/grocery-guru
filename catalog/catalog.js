@@ -615,17 +615,23 @@ const products = [
 
 const template = (data) => {
   return `
-<div class="card">
-  <img src="${data.image}">      
-  <div class="name">${data.name}</div>
-  <div class="price">$${data.price}</div>
-  <div class="discount">${data.discount}</div>
-  <button>Add to Cart</button>    
-</div>
-`
+  <div class="card">
+      <div class="card-content">
+          <div class="card-image">
+              <img src="${data.image}" alt="Product Image">
+          </div>
+          <div class="card-body">
+              <h3>${data.name}</h3>
+              <h2>$${data.price}</h2>
+              <p>${data.discount}</p>
+              <button>Add to Cart</button>
+          </div>
+      </div>
+  </div>
+  `
 }
 
-const element = document.getElementById('bodyContainer')
+const element = document.getElementById('itemsContainer')
 for (let product of products) {
   element.innerHTML += template(product)
 }

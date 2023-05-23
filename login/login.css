@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.options {
+  display: inline-grid;
+  text-align: left;
+}
+
+h2 {
+  text-align: center;
+}
+
+input {
+  margin-bottom: 15px;
+}
+
+#in {
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  margin: 1em;
+}
