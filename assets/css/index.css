@@ -1,0 +1,52 @@
+.long-div-container {
+    padding: 10px 10vw;
+    display: flex;
+
+}
+
+.long-div {
+    width: 1280px;
+    height: auto;
+    border-radius: 20px; 
+    border: solid 1px lightgrey;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.long-div-content {
+    height: 100%;
+    display: flex;
+}
+
+.long-div-image {
+    width: 100%;
+}
+.long-div-image img{
+    width: 100%;
+    height: auto;
+}
+
+.long-div-body {
+    padding: 2.5%;
+    max-width: 200px;
+    position: relative; 
+}
+
+.long-div p {
+    line-height: 25px;
+    padding-bottom: 2.5%;
+}
+.long-div-body button {
+    border: 0;
+    width: auto;
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: transparent;
+    color: rgb(52, 137, 47);
+    letter-spacing: 0.05em;
+}
+.long-div-body button:hover {
+    text-decoration: underline;
+}
