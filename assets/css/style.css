@@ -479,12 +479,13 @@ header::after {
   outline-width: 3px !important;
 }
 
-.action .cart img {
-  position: absolute;
-  top: 8px;
-  left: 6px;
-  width: 80%;
-  max-width: 100px;
-  height: 80%;
-  object-fit: cover;
+.action .cart img{
+    position: absolute;
+    padding: 10px;
+    top: 0px;
+    left: -5px;
+    width: 80%;
+    max-width: 100px;
+    height: 80%;
+    object-fit: cover;
 }
