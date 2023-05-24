@@ -2,10 +2,15 @@ if (localStorage.getItem('username')) {
   setProfileButton()
 }
 
+function getDirectory() {
+  const pages = ['cart', 'profile', 'help', 'catalog']
+  return pages.some(page => window.location.href.includes(page)) ? '..' : '.'
+}
+
 function setProfileButton() {
   const button = document.querySelector('div.menu > u1 > li:nth-child(1) > a')
   button.textContent = 'My Profile'
-  button.href = './profile/index.html'
+  button.href = `${getDirectory()}/profile/index.html`
   const hiddenContent = [
     document.querySelector("#profileContainer > div > div.menu > h3"),
     document.querySelector("#profileContainer > div > div.menu > u1 > li:nth-child(3)")
@@ -17,7 +22,7 @@ function setProfileButton() {
 function setUsername() {
   if (!isFilled()) return
   localStorage.setItem('username', document.getElementById('username').value)
-  window.location.href = '../index.html'
+  window.location.href = `${getDirectory()}/index.html`
 }
 
 function isFilled() {
