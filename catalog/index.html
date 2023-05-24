@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="./catalog.css">
+  <script defer src="../assets/js/auth.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,32 +12,25 @@
 <body>
   <header class="header">
     <a href="../index.html">
-        <img class="image" alt="GuruGrocers logo" src="../assets/img/logo.png">
+      <img class="image" alt="GuruGrocers logo" src="../assets/img/logo.png">
     </a>
-    <div id="inputWrapper">
-        <input class="outline" id="search" placeholder="Search Products..." type="text">
-    </div>
     <div id="profileContainer" class="flex">
-        <div class="action">
-            <div class="profile" onclick="menuToggle();">
-                <img src="../assets/img/profile.png">
-            </div>
-            <div class="menu">
-                <h3>Welcome Pierce<br></h3>
-                <u1>
-                    <li><img src="../assets/img/user.png"><a href="#">My Profile</a></li>
-                    <li><img src="../assets/img/edit.png"><a href="#">Edit Profile</a></li>
-                    <li><img src="../assets/img/settings.png"><a href="#">Settings</a></li>
-                    <li><img src="../assets/img/question.png"><a href="#">Help</a></li>
-                    <li><img src="../assets/img/log-out.png"><a href="#">Logout</a></li>
-                </u1>
-            </div>
+      <div class="action">
+        <div class="profile" onclick="menuToggle();">
+          <img src="../assets/img/profile.png">
+          </div>
+          <div class="menu">
+            <u1>
+              <li><img src="../assets/img/user.png"><a href="#">Sign In / Sign Up</a></li>
+              <li><img src="../assets/img/question.png"><a href="#">Help</a></li>
+            </u1>
+          </div>
         </div>
         <script>
-            function menuToggle(){
-                const toggleMenu = document.querySelector('.menu');
-                toggleMenu.classList.toggle('active');
-            }
+          function menuToggle(){
+            const toggleMenu = document.querySelector('.menu');
+            toggleMenu.classList.toggle('active');
+          }
         </script>
     </div>
   </header>

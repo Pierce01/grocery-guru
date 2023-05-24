@@ -3,6 +3,7 @@
     <head>
         <title>GuruGrocers</title>
         <link rel="stylesheet" href="../assets/css/style.css">
+        <script defer src="../assets/js/auth.js"></script>
     </head>
     <body>
         <header class="header">
@@ -13,18 +14,16 @@
                 <input class="outline" id="search" placeholder="Search Products..." type="text">
             </div>
             <div id="profileContainer" class="flex">
-                <!-- Add drop down menu here -->
                 <div class="action">
                     <div class="profile" onclick="menuToggle();">
                         <img src="../assets/img/profile.png">
                     </div>
                     <div class="menu">
-                        <h3>Welcome Pierce<br></h3>
+                        <h3 hidden>Welcome, <br></h3>
                         <u1>
-                            <li><img src="../assets/img/user.png"><a href="../profile/index.html">My Profile</a></li>
-                            <!-- <li><img src="../assets/img/settings.png"><a href="">Settings</a></li> -->
-                            <li><img src="../assets/img/question.png"><a href="../help/index.html">Help</a></li>
-                            <li><img src="../assets/img/log-out.png"><a href="#">Logout</a></li>
+                            <li><img src="../assets/img/user.png"><a href="../login/index.html">Sign In / Sign up</a></li>
+                            <li><img src="../assets/img/question.png"><a href="#">Help</a></li>
+                            <li hidden><img src="../assets/img/log-out.png"><a href="#" onclick="logout()">Logout</a></li>
                         </u1>
                     </div>
                 </div>
@@ -45,6 +44,5 @@
         <div>
 
         </div>
-        <script src="../script.js"></script>
     </body>
 </html>

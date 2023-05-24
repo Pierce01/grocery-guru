@@ -5,7 +5,7 @@ if (localStorage.getItem('username')) {
 function setProfileButton() {
   const button = document.querySelector('div.menu > u1 > li:nth-child(1) > a')
   button.textContent = 'My Profile'
-  button.href = './index.html'
+  button.href = './profile/index.html'
   const hiddenContent = [
     document.querySelector("#profileContainer > div > div.menu > h3"),
     document.querySelector("#profileContainer > div > div.menu > u1 > li:nth-child(3)")
