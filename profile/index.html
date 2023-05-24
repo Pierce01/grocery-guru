@@ -3,6 +3,7 @@
     <head>
         <title>GuruGrocers</title>
         <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/profile.css">
     </head>
     <body>
         <header class="header">
@@ -34,9 +35,40 @@
                         toggleMenu.classList.toggle('active');
                     }
                 </script>
+                <div class="action">
+                    <div class="cart">
+                        <a href="../cart/index.html"><img src="../assets/img/green-shopping-cart-10909.svg"></a>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <script src="./script.js"></script>
+        <section class ="container column" id="about-section">
+            <h1 class="subtitle">ABOUT ME</h1>
+            <div class="container row" id="img-console">
+                <!-- Profile picture -->
+                <div>
+                    <img src="../assets/img/profile.png" id="profile-img" alt="Minh Nguyen">
+                </div>
+
+                <!-- User info -->
+                <div class="right">
+                    <div class="info">
+                        <h3>Information</h3>
+                        <div class="info_data">
+                             <div class="data">
+                                <h4>Email</h4>
+                                <p>alex@gmail.com</p>
+                             </div>
+                             <div class="data">
+                               <h4>Phone</h4>
+                                <p>0001-213-998761</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="../script.js"></script>
     </body>
 </html>
