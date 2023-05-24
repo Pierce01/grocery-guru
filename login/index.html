@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GuruGrocers</title>
+        <link rel="stylesheet" href="./login.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <script defer src="../assets/js/auth.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <a href="../index.html">
+                <img class="image" alt="GuruGrocers logo" src="../assets/img/logo.png">
+            </a>
+            <div id="profileContainer" class="flex">
+                <div class="action">
+                    <div class="profile" onclick="menuToggle();">
+                        <img src="../assets/img/profile.png">
+                    </div>
+                    <div class="menu">
+                        <u1>
+                            <li><img src="../assets/img/user.png"><a href="#">Sign In / Sign Up</a></li>
+                            <li><img src="../assets/img/question.png"><a href="#">Help</a></li>
+                        </u1>
+                    </div>
+                </div>
+                <script>
+                    function menuToggle(){
+                        const toggleMenu = document.querySelector('.menu');
+                        toggleMenu.classList.toggle('active');
+                    }
+                </script>
+            </div>
+        </header>
+        <main>
+          <div id="in">
+            <h2>Sign In</h2>
+            <div class="options">
+              <label>Username:</label>
+              <input id="username">
+              <label>Password:</label>
+              <input type="password" id="password">
+              <button onclick="setUsername()">Sign In</button>
+            </div>
+            <section id="up">
+              <hr>
+              <p>Don't have an account? Make one!</p>
+              <button onclick="switchView()">Sign Up</button>
+            </section>
+          </div>
+        </main>
+    </body>
+</html>
