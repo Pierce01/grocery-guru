@@ -3,7 +3,7 @@ if (localStorage.getItem('username')) {
 }
 
 function getDirectory() {
-  const pages = ['cart', 'profile', 'help', 'catalog']
+  const pages = ['cart', 'profile', 'help', 'catalog', 'login']
   return pages.some(page => window.location.href.includes(page)) ? '..' : '.'
 }
 
