@@ -267,7 +267,6 @@ header::after {
 }
 
 .card-body p {
-  text-decoration: line-through;
   color: #bdbebe;
 }
 

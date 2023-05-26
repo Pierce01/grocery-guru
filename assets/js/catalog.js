@@ -623,7 +623,7 @@ const template = (data) => {
           <div class="card-body">
               <h3>${data.name}</h3>
               <h2>$${data.price}</h2>
-              <p>${data.discount}</p>
+              <p>${!data.discount ? 'No additional discounts' : data.discount}</p>
               <button>Add to Cart</button>
           </div>
       </div>
@@ -631,7 +631,19 @@ const template = (data) => {
   `
 }
 
-const element = document.getElementById('itemsContainer')
-for (let product of products) {
-  element.innerHTML += template(product)
+const generateProducts = () => {
+  const element = document.getElementById('itemsContainer')
+  for (let product of products) {
+    element.innerHTML += template(product)
+  }
 }
+const productSliderElement = document.getElementsByClassName('product-container')[0]
+const generateSlider = () => {
+  const sorted = products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
+  for (let i = 0; i < 10; i++) {
+    productSliderElement.innerHTML += template(sorted[i])
+  }
+}
+
+if (window.location.href.includes('catalog')) generateProducts()
+if (productSliderElement) generateSlider()
