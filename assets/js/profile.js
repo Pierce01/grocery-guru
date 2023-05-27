@@ -1,0 +1,1 @@
+document.getElementById('target').textContent = localStorage.getItem('username')
