@@ -3,6 +3,8 @@
     <head>
         <title>GuruGrocers</title>
         <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/help.css">
+        <script defer src="../assets/js/profile.js"></script>
     </head>
     <body>
         <header class="header">
@@ -13,16 +15,18 @@
                 <input class="outline" id="search" placeholder="Search Products..." type="text">
             </div>
             <div id="profileContainer" class="flex">
+                <!-- Add drop down menu here -->
                 <div class="action">
                     <div class="profile" onclick="menuToggle();">
                         <img src="../assets/img/profile.png">
                     </div>
                     <div class="menu">
-                        <h3 hidden>Welcome, <br></h3>
+                        <h3>Welcome Pierce<br></h3>
                         <u1>
-                            <li><img src="../assets/img/user.png"><a href="../login/index.html">Sign In / Sign up</a></li>
+                            <li><img src="../assets/img/user.png"><a href="../profile/index.html">My Profile</a></li>
+                            <!-- <li><img src="../assets/img/settings.png"><a href="">Settings</a></li> -->
                             <li><img src="../assets/img/question.png"><a href="../help/index.html">Help</a></li>
-                            <li hidden><img src="../assets/img/log-out.png"><a href="#" onclick="logout()">Logout</a></li>
+                            <li><img src="../assets/img/log-out.png"><a href="#">Logout</a></li>
                         </u1>
                     </div>
                 </div>
@@ -39,5 +43,65 @@
                 </div>
             </div>
         </header>
+
+        <section class ="container column" id="about-section">
+            <h1 class="subtitle">HELP</h1>
+            <div class="container row" id="img-console">
+                <!-- Profile picture -->
+                <div>
+                    <img src="../assets/img/faq.png" id="profile-img" alt="Minh Nguyen">
+                </div>
+
+                <!-- User info -->
+                <div class="right">
+                    <div class="info">
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="column1">
+                             <div class="data">
+                                <h4>1. What is Guru Grocers?</h4>
+                                <p>Guru Grocers is a website designed to help grocers in the Greater Seattle Area find the lowest prices on groceries
+                                     across various existing grocery stores. Our goal is to minimize the cost of groceries and promote a healthy lifestyle
+                                      by encouraging home cooking with affordable ingredients.</p>
+                             </div>
+                             <div class="data">
+                               <h4>2. How can Guru Grocers help me save money on groceries?</h4>
+                                <p>Guru Grocers provides up-to-date information on the lowest prices of grocery items available in the Greater Seattle Area.
+                                     By using our website, you can easily compare prices and find the best deals, helping you save money on your grocery shopping.</p>
+                             </div>
+                             <div class="data">
+                                <h4>3. How can I sign up for an account on Guru Grocers?</h4>
+                                <p>To sign up for an account, simply click on the "Sign Up" button located on the website's homepage. Fill out the required information
+                                     in the registration form, and you'll be able to create your account and start using the features available to registered users.</p>
+                             </div>
+                             <div class="data">
+                                <h4>4. Are there any special offers or discounts available on Guru Grocers?</h4>
+                                <p>Yes, as part of our strategies to promote local grocery stores, Guru Grocers provides limited-time discount codes in affiliation with
+                                     grocers, especially local grocery stores in your area. These discount codes are periodically available and can be accessed through
+                                      referral links shared by users.</p>
+                             </div>
+                             <div class="data">
+                                <h4>5. How can I report an issue or provide suggestions for improvement?</h4>
+                                <p>If you come across any issues while using Guru Grocers or have suggestions for improvement, we encourage you to share them with us.
+                                     You can utilize our Feedback Forum or contact our support team directly through the provided channels. We appreciate your contribution
+                                      to making Guru Grocers a better platform for all users.</p>
+                             </div>
+                             <div class="data">
+                                <h4>6. Is Guru Grocers available only in the Greater Seattle Area?</h4>
+                                <p>Yes, Guru Grocers is currently focused on providing information and helping grocers in the Greater Seattle Area. Our website reflects this
+                                     by showing the lowest prices available in the Greater Seattle Area grocery stores. We aim to expand to other areas in the future, but
+                                      for now, our services are tailored to the Greater Seattle community.</p>
+                             </div>
+                             <div class="data">
+                                <h4>7. Is Guru Grocers free to use?</h4>
+                                <p>Yes, Guru Grocers is free to use. We strive to keep the website accessible to all users without any fees. Our main goal is to provide a valuable
+                                     and cost-saving service to grocers in the Greater Seattle Area.</p>
+                             </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="../script.js"></script>
     </body>
 </html>
