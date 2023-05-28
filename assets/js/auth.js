@@ -2,6 +2,11 @@ if (localStorage.getItem('username')) {
   setProfileButton()
 }
 
+const searchBarElement = document.getElementById('inputWrapper')
+if (searchBarElement) {
+    searchBarElement.onclick = () => window.location.href = `${getDirectory()}/catalog/index.html`
+}
+
 function getDirectory() {
   const pages = ['cart', 'profile', 'help', 'catalog', 'login']
   return pages.some(page => window.location.href.includes(page)) ? '..' : '.'
