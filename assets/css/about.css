@@ -1,17 +1,19 @@
 .page-content {
 	width:100%;
+	height:100%;
 }
 
 .container {
 	display: flex;
 	align-items: center; 
 	justify-content: center;
-	flex-wrap: wrap;
 	align-content: center;
 }
 
 .subtitle{
-  margin-top: -300px;
+  margin-top: 150px;
+	position: absolute;
+	top: 0;
 }
 
 .row {
@@ -20,7 +22,7 @@
 
 .column {
 	flex-direction: column;
-	height: 100%;
+	height: 70vh;
 }
 
 .column1 {
@@ -48,7 +50,7 @@
 }
 
 .right{
-    width: 1000px;
+    width: 40%;
     margin: auto;
     background: #e9e9e9;
     box-shadow: 8px 8px 8px #555555;
@@ -62,3 +64,7 @@
   margin-bottom: 0px;
 }
 
+footer {
+	position: absolute;
+  bottom: 0;
+}
