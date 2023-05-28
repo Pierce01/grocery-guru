@@ -10,6 +10,7 @@ html, body {
   height: 80px;
   background-color: #E7F3CA;
   padding: 10px;
+  border-bottom-style: solid;
 }
 
 header::after {
@@ -494,6 +495,7 @@ header::after {
 footer {
   position: static;
   bottom: 10;
+  border-top-style: solid;
 }
 
 .footer-distributed {
@@ -643,6 +645,6 @@ footer {
   color: #1e4420;
 }    
 
-*{
+/* *{
   border: 1px solid red;
-}
+} */
