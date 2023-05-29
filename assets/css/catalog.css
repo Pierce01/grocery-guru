@@ -86,8 +86,7 @@
   display: none;
 }
 
-/* back to top */
-#myBtn {
+#toTopButton {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
@@ -103,6 +102,6 @@
   font-size: 18px; /* Increase font size */
 }
 
-#myBtn:hover {
+#toTopButton:hover {
   background-color: #255229; /* Add a dark-grey background on hover */
 }
