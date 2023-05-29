@@ -1,1 +1,1 @@
-document.getElementById('target').textContent = localStorage.getItem('username')
+document.getElementById('target').textContent = localStorage.getItem('username') || 'User'

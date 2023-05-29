@@ -1,17 +1,19 @@
 .page-content {
 	width:100%;
+	height:100%;
 }
 
 .container {
 	display: flex;
 	align-items: center; 
 	justify-content: center;
-	flex-wrap: wrap;
 	align-content: center;
 }
 
 .subtitle{
-  margin-top: 0px;
+  margin-top: 150px;
+	position: absolute;
+	top: 0;
 }
 
 .row {
@@ -20,6 +22,12 @@
 
 .column {
 	flex-direction: column;
+	height: 70vh;
+}
+
+.column1 {
+	width: 100%;
+    float: left;
 }
 
 #img-console {
@@ -31,24 +39,21 @@
 #profile-img {
   height: 500px;
 	border-radius: 25px;
-	box-shadow: 8px 8px 8px #555555;
 	overflow-y:hidden;
-	margin-left: 250px;
-  outline-style: solid !important;
-  outline-width: 3px !important;
+	margin-left: 100px;
 }
 
 #about-section {
 	background-color: #cfb089;
-	padding: 10px;
-	min-height:70vh;
+	padding: 0px;
+	min-height: 50vh;
 }
 
 .right{
-    width: 500px;
+    width: 40%;
     margin: auto;
-	box-shadow: 8px 8px 8px #555555;
     background: #e9e9e9;
+    box-shadow: 8px 8px 8px #555555;
     padding: 30px 30px;
     border-radius: 10px;
     outline-style: solid !important;
@@ -59,3 +64,7 @@
   margin-bottom: 0px;
 }
 
+footer {
+	position: absolute;
+  bottom: 0;
+}

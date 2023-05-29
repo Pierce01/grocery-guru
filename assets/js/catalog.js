@@ -624,20 +624,25 @@ const template = (data) => {
               <h3>${data.name}</h3>
               <h2>$${data.price}</h2>
               <p>${!data.discount ? 'No additional discounts' : data.discount}</p>
-              <button>Add to Cart</button>
+              <button onclick='updateStorage("${data.name}", "${data.price}")'>Add to Cart</button>
           </div>
       </div>
   </div>
   `
 }
 
-const generateProducts = () => {
-  const element = document.getElementById('itemsContainer')
-  for (let product of products) {
-    element.innerHTML += template(product)
-  }
-}
+const itemContainer = document.getElementById('itemsContainer')
+const input = document.querySelector('div.search > input')
 const productSliderElement = document.getElementsByClassName('product-container')[0]
+const doesMatch = (item) => item.innerText.toLowerCase().includes(input.value.toLowerCase())
+const filter = () => {
+  for (let item of itemContainer.children) item.style.display = doesMatch(item) ? 'block' : 'none'
+}
+
+const generateProducts = () => {
+  for (let product of products) itemContainer.innerHTML += template(product)
+  input.addEventListener('input', filter)
+}
 const generateSlider = () => {
   const sorted = products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
   for (let i = 0; i < 10; i++) {
