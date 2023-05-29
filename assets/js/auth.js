@@ -8,7 +8,7 @@ if (searchBarElement) {
 }
 
 function getDirectory() {
-  const pages = ['cart', 'profile', 'help', 'catalog', 'login']
+  const pages = ['cart', 'contact', 'profile', 'help', 'catalog', 'login', 'blog', 'about']
   return pages.some(page => window.location.href.includes(page)) ? '..' : '.'
 }
 
