@@ -639,9 +639,19 @@ const filter = () => {
   for (let item of itemContainer.children) item.style.display = doesMatch(item) ? 'block' : 'none'
 }
 
+function toTop () { 
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0 
+}
 const generateProducts = () => {
   for (let product of products) itemContainer.innerHTML += template(product)
   input.addEventListener('input', filter)
+  let toTopButton = document.getElementById("toTopButton")
+  toTopButton.addEventListener('click', toTop)
+  const scrollFunction = () => {
+    toTopButton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? 'block' : 'none'
+  }
+  window.addEventListener('scroll', scrollFunction)
 }
 const generateSlider = () => {
   const sorted = products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
@@ -652,23 +662,3 @@ const generateSlider = () => {
 
 if (window.location.href.includes('catalog')) generateProducts()
 if (productSliderElement) generateSlider()
-
-// Get the button:
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}

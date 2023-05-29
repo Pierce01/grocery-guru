@@ -3,16 +3,18 @@
   <head>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/catalog.css">
+  <link rel="stylesheet" href="../assets/css/breadcrumbs.css">
     <script defer src="../assets/js/auth.js"></script>
     <script defer src="../assets/js/catalog.js"></script>
     <script defer src="../assets/js/checkout.js"></script>
+  <script defer src="../assets/js/breadcrumbs.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuruGrocers Catagory</title>
   </head>
   <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="toTopButton" title="Go to top">Top</button>
     <header class="header">
       <a href="../index.html">
           <img class="image" alt="GuruGrocers logo" src="../assets/img/logo.png">
@@ -47,6 +49,7 @@
           </div>
       </div>
     </header>
+  <nav id="breadcrumbs"></nav>
     <div class="search">
       <input class="bar" placeholder="Search Products..." type="text">
     </div>
