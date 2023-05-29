@@ -140,27 +140,29 @@ header::after {
   font-weight: 400;
 }
 
-.action .menu u1 li {
+.action .menu ul li {
+  margin-left: -30px;
   list-style: none;
   padding: 10px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   direction: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
-.action .menu u1 li img {
+.action .menu ul li img {
   max-width: 20px;
   margin-right: 10px;
   opacity: 0.5;
   transition: 0.5s;
 }
 
-.action .menu u1 li:hover img {
+.action .menu ul li:hover img {
   opacity: 1;
 }
 
-.action .menu u1 li a {
+.action .menu ul li a {
   display: inline-block;
   text-decoration: none;
   color: #555;

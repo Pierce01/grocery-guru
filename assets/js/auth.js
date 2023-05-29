@@ -13,12 +13,12 @@ function getDirectory() {
 }
 
 function setProfileButton() {
-  const button = document.querySelector('div.menu > u1 > li:nth-child(1) > a')
+  const button = document.querySelector('div.menu > ul > li:nth-child(1) > a')
   button.textContent = 'My Profile'
   button.href = `${getDirectory()}/profile/index.html`
   const hiddenContent = [
     document.querySelector("#profileContainer > div > div.menu > h3"),
-    document.querySelector("#profileContainer > div > div.menu > u1 > li:nth-child(3)")
+    document.querySelector("#profileContainer > div > div.menu > ul > li:nth-child(3)")
   ]
   hiddenContent.forEach(entry => entry.hidden = false)
   hiddenContent[0].textContent += localStorage.getItem('username')
