@@ -4,10 +4,45 @@
         <title>GuruGrocers</title>
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="stylesheet" href="../assets/css/about.css">
+        <link rel="stylesheet" href="../assets/css/breadcrumbs.css">
         <script defer src="../assets/js/profile.js"></script>
         <script defer src="../assets/js/auth.js"></script>
+        <script defer src="../assets/js/breadcrumbs.js"></script>
     </head>
     <body>
+        <header class="header">
+            <a href="../index.html">
+                <img class="image" alt="GuruGrocers logo" src="../assets/img/logo.png">
+            </a>
+            <div id="inputWrapper">
+                <input class="outline" id="search" placeholder="Search Products..." type="text">
+            </div>
+            <div id="profileContainer" class="flex">
+                <div class="action">
+                    <div class="profile" onclick="menuToggle();">
+                        <img src="../assets/img/profile.png">
+                    </div>
+                    <div class="menu">
+                        <h3 hidden>Welcome, <br></h3>
+                        <ul>
+                            <li><img src="../assets/img/user.png"><a href="../login/index.html">Sign In / Sign up</a></li>
+                            <li><img src="../assets/img/question.png"><a href="../help/index.html">Help</a></li>
+                            <li hidden><img src="../assets/img/log-out.png"><a href="#" onclick="logout()">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+                    function menuToggle(){
+                        const toggleMenu = document.querySelector('.menu');
+                        toggleMenu.classList.toggle('active');
+                    }
+                </script>
+                <div class="action">
+                    <div class="cart">
+                        <a href="../cart/index.html"><img src="../assets/img/green-shopping-cart-10909.svg"></a>
+                    </div>
+                </div>
+            </div>
       <header class="header">
           <a href="../index.html">
               <img class="image" alt="GuruGrocers logo" src="../assets/img/logo.png">
@@ -43,6 +78,7 @@
               </div>
           </div>
         </header>
+        <nav id="breadcrumbs"></nav>
         <section class ="container column" id="about-section">
         <h1 class="subtitle">About Us</h1>
         <div class="container row" id="img-console">

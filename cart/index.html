@@ -4,8 +4,11 @@
         <title>GuruGrocers</title>
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="stylesheet" href="../assets/css/cart.css">
+        <link rel="stylesheet" href="../assets/css/breadcrumbs.css">
         <script defer src="../assets/js/auth.js"></script>
         <script defer src="../assets/js/checkout.js"></script>
+        <script defer src="../assets/js/breadcrumbs.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
     </head>
     <body>
         <header class="header">
@@ -42,6 +45,7 @@
                 </div>
             </div>
         </header>
+        <nav id="breadcrumbs"></nav>
         <main>
             <div id="cartContainer">
                 <div id="cartList">
@@ -51,9 +55,8 @@
                 </div>
                 <div id="cartCheckoutWrapper" class="">
                     <h3>Checkout</h3>
-                    <p>Discount:</p>
-                    <p>Tax:</p>
-                    <p>Total:</p>
+                    <p id="totalText">Total:</p>
+                    <svg id="barcode"></svg>
                 </div>
             </div>
         </main>
