@@ -10,23 +10,7 @@ ol {
   text-transform: capitalize;
   background-color: #cfb089;
 }
-ol {
-  background-color: inherit;
-  border-radius: 0;
-  clear: both;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
-  list-style: none;
-  vertical-align: middle;
-  margin-top: 10px;
-  text-transform: capitalize;
-}
 
-.bc li+li:before, .vc .active:before {
-  color: #088099;
-  content: " \003E\00a0";
-  padding: 0 7px;
-}
 .bc li+li:before, .vc .active:before {
   color: #088099;
   content: " \003E\00a0";
