@@ -639,9 +639,19 @@ const filter = () => {
   for (let item of itemContainer.children) item.style.display = doesMatch(item) ? 'block' : 'none'
 }
 
+function toTop () { 
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0 
+}
 const generateProducts = () => {
   for (let product of products) itemContainer.innerHTML += template(product)
   input.addEventListener('input', filter)
+  let toTopButton = document.getElementById("toTopButton")
+  toTopButton.addEventListener('click', toTop)
+  const scrollFunction = () => {
+    toTopButton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? 'block' : 'none'
+  }
+  window.addEventListener('scroll', scrollFunction)
 }
 const generateSlider = () => {
   const sorted = products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))

@@ -10,7 +10,13 @@ if (window.location.href.includes('cart')) renderItems()
 function updateStorage(name, price) {
   const cart = JSON.parse(localStorage.getItem('cart'))
   const locationNum = Math.floor(Math.random() * locations.length)
-  cart.products.push([name, '$' + price, locations[locationNum]])
+  let included = false
+  for (let product of cart.products) {
+    if (product[0] == name) { 
+      product[3]++; included = true; break;
+    }
+  }
+  if (!included) cart.products.push([name, '$' + price, locations[locationNum], 1])
   cart.total = parseFloat(cart.total) + parseFloat(price)
   localStorage.setItem('cart', JSON.stringify(cart))
 }
@@ -24,10 +30,12 @@ function renderItems() {
   const cartList = document.getElementById('cartList')
   if (!cart.total) return cartList.append('No Items')
   for (let product of cart.products) {
-    product.forEach(entry => {
+    product.forEach((entry, index) => {
+      if (index == 3) return
       const newDiv = document.createElement('div')
-      newDiv.innerText = entry
+      newDiv.innerText = ((index == 0 && (product[3] > 1)) ? `${entry} x ${product[3]}` : entry)
       cartList.append(newDiv)
     })
   }
+  document.getElementById('totalText').innerText += ` $${cart.total}`
 }

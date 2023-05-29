@@ -8,7 +8,7 @@ if (searchBarElement) {
 }
 
 function getDirectory() {
-  const pages = ['cart', 'profile', 'help', 'catalog', 'login']
+  const pages = ['cart', 'contact', 'profile', 'help', 'catalog', 'login', 'blog', 'about']
   return pages.some(page => window.location.href.includes(page)) ? '..' : '.'
 }
 
@@ -37,10 +37,19 @@ function isFilled() {
 }
 
 function switchView() {
-  const text = 'Sign Up'
-  document.querySelector('#in > h2').textContent = text
-  document.querySelector('#in > div > button').textContent = text
-  document.getElementById('up').remove()
+  if(document.querySelector('#in > h2').textContent === "Sign In"){
+    text = 'Sign Up'
+    document.querySelector('#in > h2').textContent = text
+    document.querySelector('#in > div > button').textContent = text
+    document.querySelector('#in > section > p').textContent = "Have an account? Sign in!"
+    document.querySelector('#in > section > button').textContent = "Sign In"
+  }else{
+    text = 'Sign In'
+    document.querySelector('#in > h2').textContent = text
+    document.querySelector('#in > div > button').textContent = text
+    document.querySelector('#in > section > p').textContent = "Don't have an account? Make one!"
+    document.querySelector('#in > section > button').textContent = "Sign Up"
+  }
 }
 
 function logout() {
