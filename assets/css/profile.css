@@ -26,6 +26,21 @@
 	width: 100%;
 }
 
+.subtitle {
+	margin-top: 0px;
+	margin-bottom: 25px;
+	padding: 10px;
+    background-color: #A9C16F;
+    border-radius: 5px;
+
+    color: black;
+    font-size: xx-large;
+    font-weight: 500;
+
+	outline-style: solid !important;
+ 	outline-width: 3px !important;
+}
+
 /* Profile */
 
 #profile-img {
@@ -33,15 +48,15 @@
 	border-radius: 25px;
 	box-shadow: 8px 8px 8px #555555;
 	overflow-y:hidden;
-	margin-left: 250px;
+	margin: 25px;
   outline-style: solid !important;
   outline-width: 3px !important;
 }
 
 #about-section {
 	background-color: #cfb089;
-	padding: 10px;
-	min-height:70vh;
+	padding: 25px;
+	height: auto;
 }
 
 .right{
