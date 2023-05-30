@@ -29,6 +29,21 @@
 	height: 100%;
 }
 
+.subtitle {
+	margin-top: 0px;
+	margin-bottom: 25px;
+	padding: 10px;
+    background-color: #A9C16F;
+    border-radius: 5px;
+
+    color: black;
+    font-size: xx-large;
+    font-weight: 500;
+
+	outline-style: solid !important;
+ 	outline-width: 3px !important;
+}
+
 /* Profile */
 
 #profile-img {

@@ -13,6 +13,16 @@
   margin-right: auto;
 }
 
+.long-div-btn a {
+    padding: 5px;
+    background-color: #A9C16F;
+    border-radius: 5px;
+
+    color: black;
+    font-size: large;
+    font-weight: 500;
+}
+
 .long-div-content {
   height: 100%;
   display: flex;

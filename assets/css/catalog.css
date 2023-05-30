@@ -109,3 +109,18 @@
 #toTopButton:hover {
   background-color: #255229; /* Add a dark-grey background on hover */
 }
+
+.search div {
+  width: 10%;
+}
+
+.search h1 {
+	margin-top: 0px;
+	margin-bottom: 25px;
+  padding: 0px;
+
+  color: black;
+  font-size: xx-large;
+  font-weight: 500;
+
+}
