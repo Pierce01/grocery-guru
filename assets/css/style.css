@@ -437,26 +437,25 @@ header::after {
   font-weight: 400;
 }
 
-.action .menu u1 li {
+.action .menu ul li {
   list-style: none;
   padding: 10px 0;
-  direction: flex;
   align-items: center;
   justify-content: center;
 }
 
-.action .menu u1 li img {
+.action .menu ul li img {
   max-width: 20px;
   margin-right: 10px;
   opacity: 0.5;
   transition: 0.25s;
 }
 
-.action .menu u1 li:hover img {
+.action .menu ul li:hover img {
   opacity: 1;
 }
 
-.action .menu u1 li a {
+.action .menu ul li a {
   display: inline-block;
   text-decoration: none;
   color: #202020;
@@ -465,7 +464,7 @@ header::after {
   transition: 0.25s;
 }
 
-.action .menu u1 li:hover a {
+.action .menu ul li:hover a {
   opacity: 1;
 }
 
