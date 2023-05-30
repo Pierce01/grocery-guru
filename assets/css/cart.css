@@ -44,3 +44,11 @@ body {
   font-size: large;
   font-weight: 500;
 }
+
+.buttons {
+  text-align: center;
+}
+
+.buttons button {
+  margin-bottom: 5px;
+}

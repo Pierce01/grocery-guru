@@ -24,6 +24,7 @@ function updateStorage(name, price) {
 
 function clearCart() {
   localStorage.setItem('cart', JSON.stringify(defaultObj))
+  window.location.reload()
 }
 
 function renderItems() {

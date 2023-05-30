@@ -10,4 +10,4 @@ function appendBread(element) {
 </ol>
   `
   element.innerHTML += nav
-} 
+}

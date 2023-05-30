@@ -67,7 +67,11 @@
                 <div id="cartCheckoutWrapper" class="">
                     <h3>Checkout</h3>
                     <p id="totalText">Total:</p>
-                    <button id="gen" onclick="download()">Generate Barcode</button>
+                    <div class="buttons">
+                        <button id="gen" onclick="download()">Generate Barcode</button>
+                        <br>
+                        <button onclick="clearCart()">Clear Cart</button>
+                    </div>
                     <svg id="barcode" style="display: none;"></svg>
                 </div>
             </div>

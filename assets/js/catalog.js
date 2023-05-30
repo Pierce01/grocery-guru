@@ -614,21 +614,22 @@ const products = [
 ]
 
 const template = (data) => {
-  return `
-  <div class="card">
-      <div class="card-content">
-          <div class="card-image">
-              <img src="${data.image}" alt="Product Image">
-          </div>
-          <div class="card-body">
-              <h3>${data.name}</h3>
-              <h2>$${data.price}</h2>
-              <p>${!data.discount ? 'No additional discounts' : data.discount}</p>
-              <button onclick='updateStorage("${data.name}", "${data.price}")'>Add to Cart</button>
-          </div>
-      </div>
-  </div>
+  const newElement = document.createElement('div')
+  newElement.className = 'card'
+  newElement.innerHTML = `
+    <div class="card-content">
+        <div class="card-image">
+            <img src="${data.image}" alt="Product Image">
+        </div>
+        <div class="card-body">
+            <h3>${data.name}</h3>
+            <h2>$${data.price}</h2>
+            <p>${!data.discount ? 'No additional discounts' : data.discount}</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
   `
+  return newElement
 }
 
 const itemContainer = document.getElementById('itemsContainer')
@@ -638,13 +639,27 @@ const doesMatch = (item) => item.innerText.toLowerCase().includes(input.value.to
 const filter = () => {
   for (let item of itemContainer.children) item.style.display = doesMatch(item) ? 'block' : 'none'
 }
-
 function toTop () { 
   document.body.scrollTop = 0
   document.documentElement.scrollTop = 0 
 }
+const activeAnimation = (element) => {
+  element = element.querySelector('button')
+  element.innerText = 'Added!'
+  setTimeout(() => {element.innerText = 'Add to Cart'}, 1000)
+}
+const appendProduct = (parent, product) => {
+  const productDiv = template(product)
+  productDiv.addEventListener('click', () => { 
+    updateStorage(product.name, product.price)
+    activeAnimation(productDiv)
+  })
+  parent.append(productDiv)
+}
 const generateProducts = () => {
-  for (let product of products) itemContainer.innerHTML += template(product)
+  for (let product of products) {
+    appendProduct(itemContainer, product)
+  }
   input.addEventListener('input', filter)
   let toTopButton = document.getElementById("toTopButton")
   toTopButton.addEventListener('click', toTop)
@@ -656,7 +671,7 @@ const generateProducts = () => {
 const generateSlider = () => {
   const sorted = products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
   for (let i = 0; i < 10; i++) {
-    productSliderElement.innerHTML += template(sorted[i])
+    appendProduct(productSliderElement, sorted[i])
   }
 }
 
