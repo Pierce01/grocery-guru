@@ -36,3 +36,17 @@ input {
 button {
   margin: 1em;
 }
+
+#in button {
+  padding: 5px;
+  background-color: #A9C16F;
+  border-radius: 5px;
+  color: black;
+  font-size: large;
+  font-weight: 500;
+  transition: all .5s;
+}
+
+#in button:hover {
+  background-color: #e1fca1;
+}
