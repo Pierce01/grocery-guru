@@ -22,6 +22,7 @@ function setProfileButton() {
   ]
   hiddenContent.forEach(entry => entry.hidden = false)
   hiddenContent[0].textContent += localStorage.getItem('username')
+  document.querySelector('.profile img').src = `${getDirectory()}/assets/img/profile-signedin.png`
 }
 
 function setUsername() {

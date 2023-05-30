@@ -67,7 +67,12 @@
                 <div id="cartCheckoutWrapper" class="">
                     <h3>Checkout</h3>
                     <p id="totalText">Total:</p>
-                    <svg id="barcode"></svg>
+                    <div class="buttons">
+                        <button id="gen" onclick="download()">Generate Barcode</button>
+                        <br>
+                        <button onclick="clearCart()">Clear Cart</button>
+                    </div>
+                    <svg id="barcode" style="display: none;"></svg>
                 </div>
             </div>
         </main>
@@ -110,6 +115,16 @@
                        existing grocery stores.</p>
             </div>
         </footer>
-
+        <script>
+            function download() {
+                const element = document.getElementById('barcode')
+                JsBarcode('#barcode', (Math.random() + 1).toString(36).substring(7))
+                element.style = "display: none;"
+                const blob = new Blob([new XMLSerializer().serializeToString(element)], { type: "image/svg+xml" })
+                const url = URL.createObjectURL(blob)
+                const win = open(url)
+                win.onload = (evt) => URL.revokeObjectURL(url)
+            }
+        </script>
     </body>
 </html>

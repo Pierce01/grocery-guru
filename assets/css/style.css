@@ -208,7 +208,7 @@ header::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, #cfb089 0%, #c7a883 0%);
+  background: transparent;
   cursor: pointer;
 
 }
