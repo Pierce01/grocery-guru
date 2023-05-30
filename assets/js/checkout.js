@@ -35,7 +35,7 @@ function renderItems() {
     product.forEach((entry, index) => {
       if (index == 3) return
       const newDiv = document.createElement('div')
-      newDiv.innerText = (index == 0 && (product[3] > 1)) ? `${entry} x ${product[3]}` : entry
+      newDiv.innerText = (index == 0 && (product[3] > 1)) ? `${entry} x ${product[3]}` : (index == 1 ? `$${entry}`: entry)
       cartList.append(newDiv)
     })
   }
