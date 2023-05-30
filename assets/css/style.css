@@ -110,7 +110,6 @@ header::after {
   padding: 10px 20px;
   background: #ffe7c9;
   width: 200px;
-  box-sizing: 0 5px 25px rgba(0, 0, 0, 1);
   border-radius: 15px;
   transition: 0.5s;
   visibility: hidden;
@@ -146,7 +145,6 @@ header::after {
   list-style: none;
   padding: 10px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-  direction: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
@@ -409,7 +407,6 @@ header::after {
   padding: 10px 20px;
   background: #ffe7c9;
   width: 200px;
-  box-sizing: 0 5px 25px rgba(0, 0, 0, 1);
   border-radius: 15px;
   transition: 0.5s;
   visibility: hidden;
@@ -443,7 +440,6 @@ header::after {
 .action .menu u1 li {
   list-style: none;
   padding: 10px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
   direction: flex;
   align-items: center;
   justify-content: center;
