@@ -86,6 +86,7 @@
   width: 60%;
   outline-style: solid !important;
   outline-width: 1px !important;
+  border: solid;
 }
 
 #inputWrapper {
