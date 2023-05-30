@@ -175,6 +175,7 @@ header::after {
   position: relative;
   overflow: hidden;
   padding: 20px;
+  background-color: #cfb089;
 }
 
 .product-category {
@@ -186,9 +187,9 @@ header::after {
 }
 
 .product-container {
-  padding: 0 10vw;
+  padding: 0 6vw;
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-behavior: smooth;
 }
 
@@ -199,14 +200,14 @@ header::after {
 .pre-btn,
 .nxt-btn {
   border: none;
-  width: 10vw;
+  width: 8vw;
   height: 100%;
   position: absolute;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  background: linear-gradient(90deg, #cfb089 0%, #c7a883 0%);
   cursor: pointer;
 
 }
@@ -235,15 +236,19 @@ header::after {
 .card {
   flex: 0 0 auto;
   width: 260px;
-  height: 506px;
+  height: 500px;
   margin: 10px;
   border-radius: 20px;
   border: solid 1px lightgrey;
+  background-color: white;
+  border-radius: 10px;
+  outline-style: solid !important;
+  outline-width: 3px !important;
 }
 
 .card-content {
-  padding: 10px;
-  min-height: 405px;
+  padding: 5px;
+  min-height: 400px;
   height: 100%;
 }
 

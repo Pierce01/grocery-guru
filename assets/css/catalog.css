@@ -61,17 +61,21 @@
   display: grid;
   overflow: hidden;
   justify-content: center;
-  margin: 30px;
+  margin: 0px;
   box-sizing: border-box;
   border: 0 solid;
   grid-template-columns: repeat(auto-fill, minmax(calc(16.2rem + 16px), 1fr));
   min-height: 506px;
+  background-color: #cfb089;
 }
 
 .search {
   justify-content: center;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #cfb089;
 }
 
 .bar {

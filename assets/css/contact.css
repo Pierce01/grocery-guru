@@ -43,8 +43,8 @@
 
 #about-section {
 	background-color: #cfb089;
-	padding: 10px;
-	min-height:0vh;
+	padding: 300px;
+	height: auto;
 }
 
 .right{
