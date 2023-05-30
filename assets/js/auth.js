@@ -38,19 +38,12 @@ function isFilled() {
 }
 
 function switchView() {
-  if(document.querySelector('#in > h2').textContent === "Sign In"){
-    text = 'Sign Up'
-    document.querySelector('#in > h2').textContent = text
-    document.querySelector('#in > div > button').textContent = text
-    document.querySelector('#in > section > p').textContent = "Have an account? Sign in!"
-    document.querySelector('#in > section > button').textContent = "Sign In"
-  }else{
-    text = 'Sign In'
-    document.querySelector('#in > h2').textContent = text
-    document.querySelector('#in > div > button').textContent = text
-    document.querySelector('#in > section > p').textContent = "Don't have an account? Make one!"
-    document.querySelector('#in > section > button').textContent = "Sign Up"
-  }
+  const existingUser = document.querySelector('#in > h2').textContent == "Sign In"
+  const text = existingUser ? "Sign Up" : "Sign In"
+  document.querySelector('#in > h2').textContent = text
+  document.querySelector('#in > div > button').textContent = text
+  document.querySelector('#in > section > p').textContent = existingUser ? "Have an account? Sign in!" : "Don't have an account? Make one!"
+  document.querySelector('#in > section > button').textContent = existingUser ? "Sign In" : "Sign Up"
 }
 
 function logout() {
