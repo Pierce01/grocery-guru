@@ -35,3 +35,13 @@ body {
 .underling {
   border-bottom: solid 1px;
 }
+
+
+#cartCheckoutWrapper button {
+  padding: 5px;
+  background-color: #A9C16F;
+  border-radius: 5px;
+  color: black;
+  font-size: large;
+  font-weight: 500;
+}
