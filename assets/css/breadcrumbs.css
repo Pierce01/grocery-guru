@@ -15,7 +15,11 @@ ol {
 }
 
 .bc li+li:before, .vc .active:before {
-  color: #088099;
+  color: #1b5220;
   content: " \003E\00a0";
   padding: 0 7px;
+}
+
+a {
+  color: black;
 }
