@@ -2,7 +2,7 @@ const navBread = document.getElementById('breadcrumbs')
 if (navBread) appendBread(navBread)
 
 function appendBread(element) {
-  const _pages = ['cart', 'profile', 'help', 'catalog', 'login']
+  const _pages = ['cart', 'contact', 'profile', 'help', 'catalog', 'login', 'blog', 'about',]
   const nav = `
 <ol class="bc">
     <li><a href="../" title="Grocery Guru's Homepage">GG Home</a></li>
