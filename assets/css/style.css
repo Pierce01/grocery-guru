@@ -1,7 +1,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "San Francisco", sans-serif;
 }
 
 .header {
@@ -646,6 +646,8 @@ footer {
   color: #1e4420;
 }    
 
-/* *{
-  border: 1px solid red;
-} */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
