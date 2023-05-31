@@ -125,8 +125,6 @@
 }
 
 .catalog {
-  text-align: -webkit-center;
-  text-align: center;
   display: flex;
 }
 

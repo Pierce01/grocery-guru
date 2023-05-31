@@ -192,10 +192,6 @@ header::after {
   scroll-behavior: smooth;
 }
 
-.product-container::-webkit-scrollbar {
-  display: none;
-}
-
 .pre-btn,
 .nxt-btn {
   border: none;
